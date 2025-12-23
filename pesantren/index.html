@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pondok Pesantren Al-Manshuriyah - Membangun Generasi Qur'ani</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pesantren: {
+                            gold: '#D4AF37',       /* Emas Elegan */
+                            green: '#044721',      /* Hijau Tua Islami */
+                            lightGreen: '#E8F5E9', /* Hijau Muda Fresh */
+                            text: '#1F2937'        /* Abu Gelap Professional */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Amiri', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Styles */
+        .hero-bg {
+            /* 1. WARNA CADANGAN (PENTING: Biar gak putih polos kalo gambar error) */
+            background-color: #044721; 
+
+            /* 2. GAMBAR BACKGROUND */
+            /* Pastikan nama file background benar */
+            background-image: linear-gradient(rgba(4, 71, 33, 0.85), rgba(4, 71, 33, 0.7)), url('assets/background-navbar.jpg');
+            
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .gold-text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-gray-50">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <img src="assets/6f978503-8e01-434c-9547-97c2aa67746b-removebg-preview.png" alt="Logo Al-Manshuriyah" class="h-16 w-auto object-contain">
+                    
+                    </div>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-pesantren-green font-medium transition">Beranda</a>
+                    <a href="#profil" class="text-gray-600 hover:text-pesantren-green font-medium transition">Profil</a>
+                    <a href="#kegiatan" class="text-gray-600 hover:text-pesantren-green font-medium transition">Kegiatan</a>
+                    <a href="#prestasi" class="text-gray-600 hover:text-pesantren-green font-medium transition">Prestasi</a>
+                    <a href="#galeri" class="text-gray-600 hover:text-pesantren-green font-medium transition">Galeri</a>
+                    <a href="#pendaftaran" class="px-5 py-2 bg-pesantren-gold text-white rounded-full font-semibold hover:bg-yellow-600 transition shadow-lg transform hover:-translate-y-0.5">Daftar Sekarang</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMenu()" class="text-pesantren-green focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-3 px-4 text-gray-700 hover:bg-pesantren-lightGreen">Beranda</a>
+            <a href="#profil" class="block py-3 px-4 text-gray-700 hover:bg-pesantren-lightGreen">Profil</a>
+            <a href="#pendaftaran" class="block py-3 px-4 text-pesantren-green font-bold bg-pesantren-lightGreen">Daftar Sekarang</a>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-bg h-screen flex items-center justify-center relative">
+        <div class="text-center text-white px-4 max-w-4xl mx-auto fade-in-up">
+            <p class="text-pesantren-gold font-serif text-xl md:text-2xl mb-4 italic">Ahlan Wa Sahlan Fi Ma'hadina</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 font-serif leading-tight gold-text-shadow">
+                Mencetak Generasi Qur'ani,<br>Cerdas & Terampil
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                 Pondok Pesantren Al-Manshuriyah memadukan kurikulum nasional dan kepesantrenan untuk melahirkan pemimpin masa depan yang tawadhu' dan kompeten.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#pendaftaran" class="px-8 py-4 bg-pesantren-gold text-white font-bold rounded-full hover:bg-yellow-600 transition shadow-xl transform hover:scale-105">
+                    Daftar Santri Baru
+                </a>
+                <a href="#profil" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-pesantren-green transition">
+                    Pelajari Selengkapnya
+                </a>
+            </div>
+        </div>
+        <div class="hidden md:flex absolute -bottom-16 w-full justify-center gap-6 px-4">
+            <div class="bg-white p-6 rounded-xl shadow-xl w-64 text-center border-t-4 border-pesantren-green">
+                <i class="fas fa-quran text-3xl text-pesantren-green mb-3"></i>
+                <h3 class="font-bold text-lg">Tahfidz Unggulan</h3>
+                <p class="text-sm text-gray-500">Target hafalan 30 Juz dengan metode mutqin.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-xl w-64 text-center border-t-4 border-pesantren-gold">
+                <i class="fas fa-laptop-code text-3xl text-pesantren-gold mb-3"></i>
+                <h3 class="font-bold text-lg">Teknologi Digital</h3>
+                <p class="text-sm text-gray-500">Ekstrakurikuler coding dan desain grafis.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-xl w-64 text-center border-t-4 border-pesantren-green">
+                <i class="fas fa-language text-3xl text-pesantren-green mb-3"></i>
+                <h3 class="font-bold text-lg">Language</h3>
+                <p class="text-sm text-gray-500">Wajib berbahasa Arab & Inggris sehari-hari.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="profil" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-pesantren-green font-serif mb-4">Tentang Pesantren</h2>
+                <div class="w-24 h-1 bg-pesantren-gold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="assets/santri-cf4b-4470-9283-4972286d2155.jpg" alt="Tahfidz Santri" class="rounded-2xl shadow-2xl">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Sejarah & Dedikasi</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-justify">
+                        Berdiri sejak tahun 1997, Pondok Pesantren Al-Manshuriyah didirikan atas dasar keprihatinan terhadap degradasi moral generasi muda. Kami hadir sebagai oase pendidikan yang tidak hanya mengasah kecerdasan kognitif (IQ), tetapi juga kecerdasan spiritual (SQ) dan emosional (EQ).
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-pesantren-lightGreen rounded-full flex items-center justify-center text-pesantren-green">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold">Visi</h4>
+                                <p class="text-sm text-gray-600">UNGGUL DALAM PRESTASI ILMU PENGETAHUAN DAN LANDASAN IMAN, TAQWA DAN AKHLAKUL KARIMAH</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-pesantren-lightGreen rounded-full flex items-center justify-center text-pesantren-green">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold">Misi</h4>
+                                <ul class="text-sm text-gray-600 list-disc ml-4">
+                                    <li>Mewujudkan budaya tafaqquh fiddin.</li>
+                                    <li>Mengintegrasikan kurikulum salaf dengan sains modern.</li>
+                                    <li>Membangun karakter kepemimpinan yang mandiri.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-10">Fasilitas Unggulan</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center p-4 bg-gray-50 rounded-xl hover:shadow-md transition">
+                        <i class="fas fa-mosque text-4xl text-pesantren-green mb-3"></i>
+                        <h4 class="font-semibold">Masjid Jami'</h4>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-xl hover:shadow-md transition">
+                        <i class="fas fa-book-reader text-4xl text-pesantren-green mb-3"></i>
+                        <h4 class="font-semibold">Gedung Permanen</h4>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-xl hover:shadow-md transition">
+                        <i class="fas fa-futbol text-4xl text-pesantren-green mb-3"></i>
+                        <h4 class="font-semibold">Lapangan</h4>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-xl hover:shadow-md transition">
+                        <i class="fas fa-flask text-4xl text-pesantren-green mb-3"></i>
+                        <h4 class="font-semibold">Perpustakaan</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kegiatan" class="py-20 bg-pesantren-lightGreen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-pesantren-green font-serif mb-4">Program & Kegiatan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kami mendesain rutinitas harian yang padat namun menyenangkan untuk membentuk kedisiplinan santri.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                    <img src="assets/kajianc10fc-854a-41f2-b7ad-47ac12f72d43.jpg" alt="Kajian Kitab" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pesantren-green mb-2">Kajian Kitab Kuning</h3>
+                        <p class="text-gray-600 text-sm">Pendalaman ilmu Fiqih, Aqidah, dan Tasawuf menggunakan referensi kitab turats klasik yang dikontekstualisasikan.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                    <img src="assets/pidato-763b-49de-ac74-1867e85ee7b6.jpg" alt="Public Speaking" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pesantren-green mb-2">Muhadhoroh (Public Speaking)</h3>
+                        <p class="text-gray-600 text-sm">Latihan pidato 3 bahasa (Arab, Inggris, Indonesia) setiap pekan untuk melatih kepercayaan diri.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
+                    <img src="assets/drumb-b05b-4c0d-b51a-db3254faf297.jpg" alt="Ekstrakurikuler" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pesantren-green mb-2">Ekstrakurikuler Skill</h3>
+                        <p class="text-gray-600 text-sm">Pilihan pengembangan diri: Panahan, Berkuda, Desain Grafis, Robotik, dan Jurnalistik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prestasi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-pesantren-green font-serif mb-12">Jejak Prestasi Santri</h2>
+            
+            <div class="relative border-l-4 border-pesantren-gold ml-4 md:ml-10 space-y-12">
+                <div class="relative pl-8">
+                    <div class="absolute -left-3.5 top-2 w-6 h-6 bg-pesantren-green rounded-full border-4 border-white"></div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="flex-1">
+                            <span class="px-3 py-1 bg-pesantren-gold text-white text-xs font-bold rounded mb-2 inline-block">November 2025</span>
+                            <h3 class="text-xl font-bold text-gray-800">Juara 1 Musabaqah Hifdzil Qur'an (MHQ) 30 Juz</h3>
+                            <p class="text-gray-600">Tingkat Provinsi Jawa Barat. Diraih oleh Ananda Ahmad Zaky.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pl-8">
+                    <div class="absolute -left-3.5 top-2 w-6 h-6 bg-pesantren-green rounded-full border-4 border-white"></div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="flex-1">
+                            <span class="px-3 py-1 bg-pesantren-gold text-white text-xs font-bold rounded mb-2 inline-block">Agustus 2025</span>
+                            <h3 class="text-xl font-bold text-gray-800">Gold Medal Olimpiade Sains Nasional (Matematika)</h3>
+                            <p class="text-gray-600">Kompetisi Pelajar Nasional. Diraih oleh Siti Aminah.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative pl-8">
+                    <div class="absolute -left-3.5 top-2 w-6 h-6 bg-pesantren-green rounded-full border-4 border-white"></div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col md:flex-row gap-6 items-center">
+                        <div class="flex-1">
+                            <span class="px-3 py-1 bg-pesantren-gold text-white text-xs font-bold rounded mb-2 inline-block">Mei 2025</span>
+                            <h3 class="text-xl font-bold text-gray-800">Juara Umum Lomba Pidato Bahasa Arab</h3>
+                            <p class="text-gray-600">Festival Pesantren Se-Indonesia di UIN Jakarta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pendaftaran" class="py-20 bg-pesantren-green text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold font-serif text-pesantren-gold">Penerimaan Santri Baru 2026/2027</h2>
+                <p class="mt-2 text-gray-200">Bergabunglah bersama keluarga besar Pondok Pesantren Al-Manshuriyah.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <div class="space-y-8">
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                        <h3 class="text-xl font-bold text-pesantren-gold mb-4"><i class="fas fa-calendar-alt mr-2"></i> Jadwal Pendaftaran</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between border-b border-white/20 pb-2">
+                                <span>Gelombang 1 (Jalur Prestasi)</span>
+                                <span class="font-bold text-pesantren-gold">Okt - Des 2025</span>
+                            </li>
+                            <li class="flex justify-between border-b border-white/20 pb-2">
+                                <span>Gelombang 2 (Reguler)</span>
+                                <span class="font-bold text-pesantren-gold">Jan - Mar 2026</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Tes Seleksi Masuk</span>
+                                <span class="font-bold text-pesantren-gold">Setiap Ahad</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                        <h3 class="text-xl font-bold text-pesantren-gold mb-4"><i class="fas fa-coins mr-2"></i> Estimasi Biaya Awal</h3>
+                        <table class="w-full text-sm text-left">
+                            <tbody>
+                                <tr class="border-b border-white/20">
+                                    <td class="py-2">Uang Pangkal (Gedung)</td>
+                                    <td class="py-2 text-right font-bold">Rp 1.000.000</td>
+                                </tr>
+                                <tr class="border-b border-white/20">
+                                    <td class="py-2">Seragam & Buku (1 Tahun)</td>
+                                    <td class="py-2 text-right font-bold">Rp 1.500.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2">SPP Bulan Pertama</td>
+                                    <td class="py-2 text-right font-bold">Rp 1.000.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs mt-4 text-gray-300">*Biaya dapat diangsur 3x selama semester pertama.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-pesantren-green mb-6 text-center">Formulir Pendaftaran Online</h3>
+                    <form onsubmit="handleDaftar(event)">
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">Nama Lengkap Santri</label>
+                                <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pesantren-green focus:outline-none" required placeholder="Sesuai Akta Kelahiran">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">Jenis Kelamin</label>
+                                <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pesantren-green focus:outline-none">
+                                    <option>Laki-laki (Ikhwan)</option>
+                                    <option>Perempuan (Akhwat)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="block text-sm font-semibold mb-1">Alamat Lengkap</label>
+                            <textarea class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pesantren-green focus:outline-none" rows="2" required placeholder="Jalan, RT/RW, Kota"></textarea>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">No. WhatsApp Wali</label>
+                                <input type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pesantren-green focus:outline-none" required placeholder="0812...">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">Gelombang</label>
+                                <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pesantren-green focus:outline-none">
+                                    <option>Gelombang 1</option>
+                                    <option>Gelombang 2</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold mb-1">Upload Kartu Keluarga (KK)</label>
+                            <input type="file" class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm bg-gray-50">
+                            <p class="text-xs text-gray-500 mt-1">Format JPG/PDF, Maks 2MB.</p>
+                        </div>
+
+                        <button type="submit" class="w-full bg-pesantren-green text-white font-bold py-3 rounded-lg hover:bg-green-900 transition shadow-lg">
+                            Kirim Data Pendaftaran
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-pesantren-green font-serif">Galeri Pesantren</h2>
+                <p class="text-gray-500">Potret keseharian santri dalam menuntut ilmu.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kegiatan 1" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold"><i class="fas fa-search-plus"></i> Lihat</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl cursor-pointer h-48">
+                    <img src="https://images.unsplash.com/photo-1599008633840-052c7f284668?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kegiatan 2" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl cursor-pointer h-48">
+                    <img src="https://images.unsplash.com/photo-1585036156171-384164a8c675?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kegiatan 3" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl cursor-pointer h-48">
+                    <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kegiatan 4" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="relative group overflow-hidden rounded-xl cursor-pointer h-48">
+                    <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Kegiatan 5" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="logo.png" alt="Logo Al-Manshuriyah" class="h-12 w-auto object-contain">
+                        
+                        <span class="text-2xl font-bold text-white font-serif">Al-Manshuriyah</span>
+                    </div>
+                    <p class="mb-6 text-sm leading-relaxed">
+                        Kami siap melayani informasi pendaftaran dan kunjungan orang tua santri. Silakan hubungi kami melalui kontak yang tersedia.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt w-6 text-pesantren-gold"></i> Jl. Al-Hidayah No. 15, RT 03/RW 03, Kelurahan Poris Plawad Indah, Kecamatan Cipondoh, Kota Tangerang, Banten 15141,</li>
+                        <li class="flex items-center"><i class="fas fa-phone w-6 text-pesantren-gold"></i> +62 812-9352-7401</li>
+                        <li class="flex items-center"><i class="fas fa-envelope w-6 text-pesantren-gold"></i> info@almanshuriyah_official</li>
+                    </ul>
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-pesantren-gold hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-pesantren-gold hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-pesantren-gold hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="h-64 rounded-xl overflow-hidden bg-gray-800 relative">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126831.96695333504!2d106.77708304245906!3d-6.589882260170044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c6cf9135368b%3A0x6c29b9f71c4c11b1!2sBogor%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1689230000000!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Hubungi Kami</h3>                                                                                                                                                     
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Nama Anda" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:border-pesantren-gold focus:outline-none text-white">
+                        <input type="email" placeholder="Email Address" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:border-pesantren-gold focus:outline-none text-white">
+                        <textarea placeholder="Pesan Anda" rows="3" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:border-pesantren-gold focus:outline-none text-white"></textarea>
+                        <button class="px-6 py-2 bg-pesantren-gold text-white font-bold rounded hover:bg-yellow-600 transition">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-sm text-gray-500">
+                © 2025 Pondok Pesantren Al-Manshuriyah. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+
+        // 2. Navbar Scroll Effect (Transparan ke Putih saat scroll)
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('py-2');
+            } else {
+                // Optional: Kalau mau navbar transparan di paling atas bisa diatur disini
+                // navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // 3. Form Handling (Simulasi)
+        function handleDaftar(event) {
+            event.preventDefault();
+            // Disini bisa ditambahkan logika kirim data ke backend/API
+            alert("Alhamdulillah! Data pendaftaran Anda telah kami terima. Panitia akan segera menghubungi Anda via WhatsApp.");
+            event.target.reset();
+        }
+
+        // 4. Smooth Scroll untuk Link Anchor (Sudah ditangani CSS scroll-smooth, tapi ini backup untuk browser lama)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Tutup menu mobile jika diklik
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
